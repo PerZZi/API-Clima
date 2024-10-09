@@ -44,6 +44,7 @@ public class WebConfig {
                                 .requestMatchers( HttpMethod.GET,"/weather/**").permitAll()
                                 .requestMatchers( HttpMethod.DELETE,"/weather/**").permitAll()
                                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                                .requestMatchers(HttpMethod.POST,"/client/register").permitAll()
                                 .anyRequest().authenticated()
                 )
 
